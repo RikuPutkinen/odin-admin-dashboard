@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black */
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+.sidebar {
+  grid-row: 1 / -1;
+  grid-column: 1;
+  background-color: #0ea5e9;
+  color: #eee;
+  display: grid;
+  align-content: flex-start;
+  gap: 30px;
+  padding: 16px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+.sidebar li {
+  font-size: 24px;
+  margin: 8px;
+
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  grid-row: 1;
+  grid-column: 2;
+  display: grid;
+  gap: 32px;
+}
+
+.top {
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+}
+
+.top > input[type="search"] {
+  flex: 1;
+  font-size: 20px;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 8px;
+  align-items: center;
+}
+
+.username-big {
+  font-size: 32px;
+}
+
+.bottom .buttons ul {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #0ea5e9;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #eee;
+  outline: none;
+  border: none;
+  padding: 8px;
+  width: 100px;
+}
+
+.project-card button {
+  width: auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.main-content {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  background-color: #f0f9ff;
+}
+
+.projects {
+  grid-row: 1;
+  grid-column: 1;
+  margin: 24px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 16px;
+  max-height: 100%;
+}
+
+.project-card, .announcements .container, .trending .container {
+  background-color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 10px 10px #e0f2fe;
+}
+
+.project-card {
+  height: 220px;
+  display: grid;
+  align-items: center;
+}
+
+.project-card .heading {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.project-card > .content {
+  overflow: clip;
+  height: 60%;
+}
+
+.project-card .controls {
+  justify-self: flex-end;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 50px;
+  margin: 24px;
+}
+
+.announcements, .trending {
+  flex: 1;
+}
+
+.announcements .item {
+  height: 100px;
+}
+
+.announcements .heading {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+hr {
+  margin: 8px 0;
+}
+
+.item > .content {
+  overflow: clip;
+  height: 70%;
+}
+
+.trending .container {
+  display: grid;
+  gap: 8px;
+}
+
+.trending .project-name {
+  color: #555;
+}
